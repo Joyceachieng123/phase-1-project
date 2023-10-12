@@ -12,7 +12,35 @@ document.addEventListener('DOMContentLoaded', () => {
  fetch(apiUrl, options)
     .then((resp) => resp.json())
     .then((data) => {
-     
+      console.log(data);
+      const catFactContainer = document.getElementById("CatFact");
+      data.forEach((item) => {
+        const image = document.createElement("img")
+        image.src = item.url
+        catFactContainer.appendChild(image)
+        
+     })
+
+     const button = document.getElementById("interchangeButton")
+        button.addEventListener ("click",() => {
+         location.reload(false) 
+       })
+let form = document.getElementById("form-cat")
+form.addEventListener("submit",(e) =>{
+  e.preventDefault()
+})
+const likeButtons = document.querySelectorAll(".fa.fa-heart");
+likeButtons.forEach((likeButton) => {
+  likeButton.addEventListener("click", (e) => {
+      likeButton.classList.toggle("liked");
+})
+})
+  
+    
+    })
+    .catch(error => {
+      console.error("Error fetching cat:", error);
     });
 
   })
+
