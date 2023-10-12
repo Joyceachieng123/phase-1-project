@@ -4,14 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
     <title>Document</title>
 
 </head>
 <body>
     <h1>Cat Preference</h1>
-    <p></p>
-    
-    <div id="CatFact">
+    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+    <ul>
+        <li><strong>Catz</strong></li>
+        <li>Home</li>
+        <li>cat Breeds</li>
+        <li>Cat of Choice</li>
+    </ul>
+    <br>
+    <br>
+    <section id="home">
+    <div class="homep">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore ea qui, dolor sunt magnam dolorum quis, cumque adipisci accusamus rem eius eos neque quos dolores porro ratione totam distinctio sequi doloribus consequuntur est maiores velit? Ab distinctio culpa aliquam, suscipit assumenda quam minus quos totam, sapiente repellendus quis perspiciatis, animi omnis eum odit alias ex tenetur mollitia natus. Id blanditiis voluptatibus inventore nesciunt a dolores quidem molestiae minima quia! Nobis, ducimus delectus. Commodi libero quidem at, quod unde dolorem laboriosam totam natus quibusdam illum sunt vero animi corporis sint repellendus, debitis quae eum in? Deserunt pariatur architecto eligendi dolorum similique!</p>
+    </div>
+    <div class="imagehome">
+<img src="/home/itsachieng/Downloads/beautiful-kitten-with-flowers-outdoors_23-2150752874.avif" alt="Home image" id="hoome">
+</div>
+</section>
+</div>
+<br>
+<br>
+<div>
+<h1>Most Popular Cat breeds</h1>
+<div id="breedInfo">
+    <h2>Breed </h2>
+    <label for="catBreed">Select a Cat Breed:</label>
+    <select id="catBreed">
+        <option value="persian">Persian</option>
+        <option value="maine-coon">Maine Coon</option>
+        <!-- Add options for other cat breeds as needed -->
+    </select>
+    <p>Select a breed from the dropdown to view information.</p>
+</div>
+</div>
+
+<br>
+<br> 
+<h1>Cat of Choice</h1>
+<div id="selectCat">
+<div id="CatFact">
         <button id="interchangeButton">Interchange Cats</button>
     </div>
     <div>
@@ -19,7 +56,9 @@
             <input id="input" placeholder="comment"/>
             <input type = "submit" placeholder = "Submit comment"/>
         </form>
+        <i class="fa fa-heart"> </i> <br>  
     </div>
+</div>
     <script src="index.js"></script>
     
 </body>
