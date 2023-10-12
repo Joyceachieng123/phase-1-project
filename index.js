@@ -28,16 +28,24 @@ document.addEventListener('DOMContentLoaded', () => {
 let form = document.getElementById("form-cat")
 form.addEventListener("submit",(e) =>{
   e.preventDefault()
+
+let inputVal = e.target.input.value
+            let p = document.createElement("p")
+            p.textContent = inputVal
+            catFactContainer.appendChild(p)
 })
+
 const likeButtons = document.querySelectorAll(".fa.fa-heart");
 likeButtons.forEach((likeButton) => {
   likeButton.addEventListener("click", (e) => {
       likeButton.classList.toggle("liked");
 })
+
 })
   
     
     })
+    
     .catch(error => {
       console.error("Error fetching cat:", error);
     });
