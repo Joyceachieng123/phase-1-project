@@ -1,0 +1,29 @@
+body{
+    font-family: sans-serif;
+    font-size: large;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+}
+ul{
+    display: flex;
+    justify-content: space-between;
+
+}
+.liked {
+    color: rgb(184, 47, 47);
+  }
+  #home {
+display: flex;
+  }
+#hoome {
+    height: 500px;
+    width: 500px;
+} 
+#selectCat{
+    display: flex;
+    justify-content: space-around;
+}
