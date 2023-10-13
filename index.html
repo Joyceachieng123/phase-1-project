@@ -14,11 +14,11 @@
     <div id="options">
     <ul id="header">
         
-        <li id="home-link">Home</li>
-    <li id="catBreeds-link">Cat Breeds</li> <!-- Add an ID to this list item -->
-    <li id="catOfChoice-link">Cat of Choice</li> 
-    </ul>
-    <span> <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        <li id="homeLink">Home</li>
+    <li id="catBreedsLink">Cat Breeds</li> 
+    <li id="catOfChoiceLink">Cat of Choice</li> 
+    
+   <li> 
         <button id="loginToggle">Login</button>
             <form id="loginForm" style="display: none;">
                 <label for="userName">user name:</label><br>
@@ -27,7 +27,11 @@
                 <input type="password" id="password" name="password"><br><br>
                 <input type="submit" value="Submit" id="submit-button">
             </form>
-        </span>
+        
+    </li>
+    <li><span> <i class="fa fa-shopping-cart" aria-hidden="true"></i></span></li>
+
+    </ul>
 </div>
     <br>
     <br>
@@ -43,15 +47,15 @@
 </div>
 <br>
 <br>
-<div id="breed">
+<div id="catBreedsSection">
 <h1> Cat breeds</h1>
 <div id="breedInfo">
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi illum iste obcaecati commodi impedit, similique ullam reiciendis facere accusantium officia explicabo! Doloremque nulla ut cupiditate vero provident laboriosam numquam corrupti.</p>
-    <label for="catBreed">Select a Cat Breed</label>
+    <label for="catBreed"><strong>Select a Cat Breed</strong></label>
     <select id="catBreed">
         <option value="persian">Persian</option>
         <option value="maine-coon">Maine Coon</option>
-        <!-- Add options for other cat breeds as needed -->
+        
     </select>
     <p>Select a breed from the dropdown to view information.</p>
 </div>
@@ -59,7 +63,7 @@
 
 <br>
 <br> 
-<div id="choice">
+<div id="catOfChoiceSection">
 <h1>Cat of Choice</h1>
 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi provident distinctio numquam at quasi dicta veritatis nihil illum, cupiditate, placeat eius deserunt accusantium non hic. Voluptatum ipsum ea excepturi autem alias exercitationem cumque minima modi repellendus eum aut, natus ipsa velit quam labore. Cum, blanditiis vitae optio vero doloribus hic! Minima eligendi libero voluptatem blanditiis, velit, incidunt earum nisi necessitatibus itaque repellendus repudiandae placeat eveniet aut perferendis error! Aliquam qui nesciunt dolore nulla minima veniam, animi autem illo deserunt officiis, voluptatum magnam vel dicta repellat harum, eveniet laboriosam aliquid ab maiores tenetur sint laborum. Doloribus consectetur officia obcaecati fugiat eligendi!</p>
 <div id="selectCat">
@@ -85,13 +89,12 @@
     
 </body>
 <footer id="footer">
-    <ul id="contacts">
+    
+    <ul id="moreInfo">
         <li>Contact us</li>
         <li>Need help?</li>
         <li>Social media platforms</li>
-    </ul>
-    <ul id="moreInfo">
-        
+        <li>welcome</li>
         <li>Learn more</li>
         <li>Read Our Blog </li>
           <li>Rover Q&A Community</li>  

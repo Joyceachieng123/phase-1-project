@@ -112,6 +112,26 @@ let isLiked = false;
             }
         });
         
-  })
-
+        const homeLink = document.getElementById("homeLink");
+          const homeSection = document.getElementById("homeSection");
+          const catBreedsLink = document.getElementById("catBreedsLink");
+          const catBreedsSection = document.getElementById("catBreedsSection");
+          const catOfChoiceLink = document.getElementById("catOfChoiceLink");
+          const catOfChoiceSection = document.getElementById("catOfChoiceSection");
+      
+          function addHighlighting(section, link) {
+              link.addEventListener("mouseover", () => {
+                  section.classList.add("highlighted");
+              });
+      
+              link.addEventListener("mouseout", () => {
+                  section.classList.remove("highlighted");
+              });
+          }
+      
+          addHighlighting(homeSection, homeLink);
+          addHighlighting(catBreedsSection, catBreedsLink);
+          addHighlighting(catOfChoiceSection, catOfChoiceLink);
+      });
+           
 
