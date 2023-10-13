@@ -10,7 +10,16 @@
 </head>
 <body>
     <h1>Cat Preference</h1>
-    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+    <span> <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        <button id="loginToggle">Login</button>
+            <form id="loginForm" style="display: none;">
+                <label for="userName">user name:</label><br>
+                <input type="text" id="username" name="username"><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password"><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </span>
     <div id="options">
     <ul id="header">
         <li><strong><style></style>Catz</strong></li>
@@ -89,5 +98,9 @@
         <li>Careers</li>
         <li>Help Center</li>
     </ul>
+    <p class="footer-copyright__text">
+        <span class="footer-copyright__span footer-copyright__span--shop">&copy; Copyright 2023 | October' catz limited | All rights reserved.</span>
+        
+        </p>
 </footer>
 </html>
