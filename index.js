@@ -102,7 +102,16 @@ let isLiked = false;
         breedInfoContainer.innerHTML = "Breed information not found.";
       }
     }
-    
+    const loginToggle = document.getElementById("loginToggle");
+    const loginForm = document.getElementById("loginForm");
+
+        loginToggle.addEventListener("click", () => {
+            if (loginForm.style.display === "none") {
+                loginForm.style.display = "block";
+            } else {
+                loginForm.style.display = "none";
+            }
+        });
   })
 
 
