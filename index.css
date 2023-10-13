@@ -2,6 +2,15 @@ body{
     font-family:Arial, Helvetica, sans-serif ;
     font-size: large;
 }
+#header li:first-child {
+    font-size: 30px; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    background-color: white;
+    color: rgb(71, 21, 71);;
+}
+
 
 img {
     height: 300px;
@@ -12,16 +21,16 @@ img {
 }
 h1{
     text-align: center;
-  color: #333;
+  color: rgb(71, 21, 71);;
   margin: 20px 0;
 }
   
   #header {
-    justify-content: 0;
+    justify-content:space-around;
      display: flex;
-    list-style: none; /* Remove bullets */
+    list-style: none;
     padding: 0;
-    background-color: #333;
+    background-color: rgb(71, 21, 71);;
     margin: 0;
 
   }
@@ -77,10 +86,15 @@ padding: 20px;
 }
 #moreInfo,
 #footer {
-    background-color: #333;
+    background-color: rgb(71, 21, 71);
     color: #fff;
     text-align: center;
     padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    
     
 }
 
@@ -91,14 +105,26 @@ padding: 20px;
     justify-content: space-around;
     font-size: larger;
 }
-#footer ul li {
-    margin: 10px 0;
+#footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Style the li inside the footer */
+#footer li {
+    flex-basis: 25%; /* Adjust this value to determine the number of columns */
+    margin: 10px;
     cursor: pointer;
     transition: color 0.3s;
-    list-style: none;
-    
-  }
+    text-align: center;
+}
   
   #footer ul li:hover {
-    color: #00f; /* Change color on hover */
+    color: #00f; 
   }
+  
