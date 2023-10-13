@@ -13,14 +13,15 @@
     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
     <div id="options">
     <ul id="header">
-        <li><strong>Catz</strong></li>
-        <li>Home</li>
-        <li>cat Breeds</li>
-        <li>Cat of Choice</li>
+        <li><strong><style></style>Catz</strong></li>
+        <li id="home-link">Home</li>
+    <li id="catBreeds-link">Cat Breeds</li> <!-- Add an ID to this list item -->
+    <li id="catOfChoice-link">Cat of Choice</li> 
     </ul>
 </div>
     <br>
     <br>
+    <div id="homeSection">
     <section id="home">
     <div class="homep">
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore ea qui, dolor sunt magnam dolorum quis, cumque adipisci accusamus rem eius eos neque quos dolores porro ratione totam distinctio sequi doloribus consequuntur est maiores velit? Ab distinctio culpa aliquam, suscipit assumenda quam minus quos totam, sapiente repellendus quis perspiciatis, animi omnis eum odit alias ex tenetur mollitia natus. Id blanditiis voluptatibus inventore nesciunt a dolores quidem molestiae minima quia! Nobis, ducimus delectus. Commodi libero quidem at, quod unde dolorem laboriosam totam natus quibusdam illum sunt vero animi corporis sint repellendus, debitis quae eum in? Deserunt pariatur architecto eligendi dolorum similique!</p>
@@ -32,8 +33,8 @@
 </div>
 <br>
 <br>
-<div>
-<h1>Most Popular Cat breeds</h1>
+<div id="breed">
+<h1> Cat breeds</h1>
 <div id="breedInfo">
     <h2>Breed </h2>
     <label for="catBreed">Select a Cat Breed:</label>
@@ -48,6 +49,7 @@
 
 <br>
 <br> 
+<div id="choice">
 <h1>Cat of Choice</h1>
 <div id="selectCat">
 <div id="CatFact">
@@ -58,8 +60,10 @@
             <input id="input" placeholder="comment"/>
             <input type = "submit" placeholder = "Submit comment"/>
         </form>
-        <i class="fa fa-heart"> </i> <br>  
+        <i class="fa fa-heart"> </i> 
+        <span id="likeCount">0</span>
     </div>
+</div>
 </div>
     <script src="index.js"></script>
     
