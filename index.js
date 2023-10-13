@@ -39,8 +39,24 @@ const likeButtons = document.querySelectorAll(".fa.fa-heart");
 likeButtons.forEach((likeButton) => {
   likeButton.addEventListener("click", (e) => {
       likeButton.classList.toggle("liked");
+      
 })
-
+let likeCount = 0;
+let isLiked = false;
+    const likeCountElement = document.getElementById('likeCount');
+    likeButton.addEventListener('click', () => {
+      if (isLiked) {
+          likeCount--;
+          likeCountElement.textContent = likeCount;
+          likeButton.classList.remove('liked');
+      } else {
+          likeCount++;
+          likeCountElement.textContent = likeCount;
+          likeButton.classList.add('liked');
+      }
+      isLiked = !isLiked;
+  });
+    
 })
   
     
@@ -86,6 +102,7 @@ likeButtons.forEach((likeButton) => {
         breedInfoContainer.innerHTML = "Breed information not found.";
       }
     }
-     
+    
   })
+
 
