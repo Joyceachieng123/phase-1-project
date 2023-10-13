@@ -33,6 +33,7 @@ let inputVal = e.target.input.value
             let p = document.createElement("p")
             p.textContent = inputVal
             catFactContainer.appendChild(p)
+            document.getElementById("input").value = "";
 })
 
 const likeButtons = document.querySelectorAll(".fa.fa-heart");
