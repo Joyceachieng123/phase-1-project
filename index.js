@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // API call to retrieve data about a cat
   const apiUrl = "https://cat14.p.rapidapi.com/v1/images/search";
   
   const options = {
@@ -9,9 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
       'X-RapidAPI-Host': 'cat14.p.rapidapi.com'
     },
   };
+  // Fetching data and updating the DOM with cat information
  fetch(apiUrl, options)
     .then((resp) => resp.json())
     .then((data) => {
+       // Logging data and updating the cat image
       console.log(data);
       const catFactContainer = document.getElementById("CatFact");
       data.forEach((item) => {
@@ -20,11 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
         catFactContainer.appendChild(image)
         
      })
-
+    
+     // Get the button for refreshing the cat images
      const button = document.getElementById("interchangeButton")
         button.addEventListener ("click",() => {
          location.reload(false) 
        })
+    // Get the form for submitting comments and add submit event listener
 let form = document.getElementById("form-cat")
 form.addEventListener("submit",(e) =>{
   e.preventDefault()
@@ -36,7 +41,9 @@ let inputVal = e.target.input.value
             document.getElementById("input").value = "";
 })
 
+ // Get all the heart icons for likes
 const likeButtons = document.querySelectorAll(".fa.fa-heart");
+// Iterate over each heart icon and add click event listeners
 likeButtons.forEach((likeButton) => {
   likeButton.addEventListener("click", (e) => {
       likeButton.classList.toggle("liked");
@@ -45,6 +52,7 @@ likeButtons.forEach((likeButton) => {
 let likeCount = 0;
 let isLiked = false;
     const likeCountElement = document.getElementById('likeCount');
+    // Update the like count and toggle the liked class on click
     likeButton.addEventListener('click', () => {
       if (isLiked) {
           likeCount--;
@@ -57,22 +65,26 @@ let isLiked = false;
       }
       isLiked = !isLiked;
   });
-    
+  
 })
   
-    
-    })
-    
+
+})
+    // Handle any errors that occur during the fetch request
     .catch(error => {
       console.error("Error fetching cat:", error);
     });
+    
+    // Dropdown functionality for selecting a cat breed
     const catBreedDropdown = document.getElementById("catBreed");
     catBreedDropdown.addEventListener("change", (e) => {
      const selectedBreed = e.target.value;
       updateContentForBreed(selectedBreed);
     });
+    // Function to update the content based on the selected cat breed
     function updateContentForBreed(selectedBreed) {
-      
+       
+      // Object containing data about different cat breeds
       const breedContent = {
         "persian": {
           title: "Persian",
@@ -93,10 +105,10 @@ let isLiked = false;
       
         },
     };
-      
+    // Rendering the selected breed information on the page
       const selectedBreedInfo = breedContent[selectedBreed];
     
-      
+    
       const breedInfoContainer = document.getElementById("breedInfo");
       if (selectedBreedInfo) {
         breedInfoContainer.innerHTML = `
@@ -109,6 +121,8 @@ let isLiked = false;
         breedInfoContainer.innerHTML = "Breed information not found.";
       }
     }
+    
+    // Toggling the login form visibility
     const loginToggle = document.getElementById("loginToggle");
     const loginForm = document.getElementById("loginForm");
 
@@ -119,14 +133,16 @@ let isLiked = false;
                 loginForm.style.display = "none";
             }
         });
-        
+
+        // Highlight the active section in the navigation bar
         const homeLink = document.getElementById("homeLink");
           const homeSection = document.getElementById("homeSection");
           const catBreedsLink = document.getElementById("catBreedsLink");
           const catBreedsSection = document.getElementById("catBreedsSection");
           const catOfChoiceLink = document.getElementById("catOfChoiceLink");
           const catOfChoiceSection = document.getElementById("catOfChoiceSection");
-      
+     
+          // Function for adding highlighting to the active section
           function addHighlighting(section, link) {
               link.addEventListener("mouseover", () => {
                   section.classList.add("highlighted");
@@ -137,6 +153,7 @@ let isLiked = false;
               });
           }
       
+          // Add highlighting for each section in the navigation bar
           addHighlighting(homeSection, homeLink);
           addHighlighting(catBreedsSection, catBreedsLink);
           addHighlighting(catOfChoiceSection, catOfChoiceLink);

@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags and links to external stylesheets -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
-    <title>Document</title>
+    <title>Cat Preference</title>
 
 </head>
 <body>
+<!-- Main heading for the page -->
     <h1>Cat Preference</h1>
-   
+   <!--Unordered Navigation lists -->
     <div id="options">
     <ul id="header">
         
@@ -19,6 +21,7 @@
     <li id="catOfChoiceLink">Cat of Choice</li> 
     
    <li> 
+    <!-- Login button and form -->
         <button id="loginToggle">Login</button>
             <form id="loginForm" style="display: none;">
                 <label for="userName">user name:</label><br>
@@ -29,12 +32,12 @@
             </form>
         
     </li>
-    <li><span> <i class="fa fa-shopping-cart" aria-hidden="true"></i></span></li>
-
-    </ul>
+    
+</ul>
 </div>
     <br>
     <br>
+    <!--Home section content-->
     <div id="homeSection">
     <section id="home">
     <div class="home-paragraph">
@@ -47,11 +50,14 @@
 </div>
 <br>
 <br>
+<!--A section for Cat breeds-->
 <div id="catBreedsSection">
 <h1> Cat breeds</h1>
 <div id="breedInfo">
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi illum iste obcaecati commodi impedit, similique ullam reiciendis facere accusantium officia explicabo! Doloremque nulla ut cupiditate vero provident laboriosam numquam corrupti.</p>
+     <!-- Label for the breed selection dropdown -->
     <label for="catBreed"><strong>Select a Cat Breed</strong></label>
+    <!-- Dropdown for selecting different cat breeds -->
     <select id="catBreed">
         <option value="">Click Me!</option>
         <option value="persian">Persian</option>
@@ -65,23 +71,25 @@
 
 <br>
 <br> 
+<!--Cat Of Choice div-->
 <h1>Cat of Choice</h1>
 <div id="catOfChoiceSection">
 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi provident distinctio numquam at quasi dicta veritatis nihil illum, cupiditate, placeat eius deserunt accusantium non hic. Voluptatum ipsum ea excepturi autem alias exercitationem cumque minima modi repellendus eum aut, natus ipsa velit quam labore. Cum, blanditiis vitae optio vero doloribus hic! Minima eligendi libero voluptatem blanditiis, velit, incidunt earum nisi necessitatibus itaque repellendus repudiandae placeat eveniet aut perferendis error! Aliquam qui nesciunt dolore nulla minima veniam, animi autem illo deserunt officiis, voluptatum magnam vel dicta repellat harum, eveniet laboriosam aliquid ab maiores tenetur sint laborum. Doloribus consectetur officia obcaecati fugiat eligendi!</p>
 <div id="selectCat">
 <div id="CatFact">
-
+<!-- Section for displaying a variety of cats -->
     </div>
     <br>
     <div>
+        <!-- Section for the button to interchange cats and comment form -->
         <button id="interchangeButton">Interchange Cats</button>
     </div>
     <div>
         <form id="form-cat">
-            <input id="input" placeholder="comment"/>
+            <input id="input" placeholder="comment"/> <!-- Input field for the comment -->
             <input type = "submit" placeholder = "Submit comment" id="submit-comment"/>
         </form>
-        
+        <!-- Heart icon for liking the cat -->
         <i class="fa fa-heart"> </i> 
         <span id="likeCount">0</span>
     </div>
@@ -90,6 +98,7 @@
     <script src="index.js"></script>
     
 </body>
+<!-- Footer section -->
 <footer id="footer">
     
     <ul id="moreInfo">
